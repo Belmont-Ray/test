@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>个人简历</title>
+    <style>
+        body {
+            font-family: "微软雅黑", sans-serif;
+            background-color: #f0f0f0;
+            padding: 30px;
+        }
+        
+        .resume-table {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        caption {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+            padding: 20px;
+            background-color: #ecf0f1;
+        }
+
+        td {
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            vertical-align: top;
+        }
+
+        .icon-cell {
+            width: 40px;
+            text-align: center;
+            color: #3498db;
+            font-size: 20px;
+        }
+
+        .photo-cell {
+            text-align: center;
+        }
+
+        .photo-cell img {
+            max-width: 200px; /* 设置图片的最大宽度 */
+            height: auto;    /* 高度自动调整以保持比例 */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .photo-cell img:hover {
+            transform: scale(1.05); /* 鼠标悬停时稍微放大图片 */
+        }
+
+        .merge-row {
+            background-color: #f8f9fa;
+        }
+
+        .editable {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 5px;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .editable:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+        }
+
+        select {
+            width: 100%;
+            padding: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            resize: vertical; /* 允许垂直调整大小 */
+        }
+    </style>
+</head>
+<body>
+    <table class="resume-table">
+        <caption>何沛洋的个人简历</caption>
+        
+        <!-- 基本信息 -->
+        <tr>
+            <td class="icon-cell">📋</td>
+            <td colspan="2">
+                <strong>基本信息</strong><br>
+                姓名：<input type="text" class="editable" value="何沛洋"><br>
+                性别：<select class="editable">
+                        <option value="男" selected>男</option>
+                        <option value="女">女</option>
+                        <option value="其他">其他</option>
+                     </select><br>
+                年龄：<input type="number" class="editable" value="19"><br>
+                民族：<select class="editable">
+                        <option value="汉族" selected>汉族</option>
+                        <option value="壮族">壮族</option>
+                        <option value="回族">回族</option>
+                        <option value="满族">满族</option>
+                        <option value="其他">其他</option>
+                     </select><br>
+                籍贯：<input type="text" class="editable" value="湖南"><br>
+                联系电话：<input type="tel" class="editable" value="158-7356-0627"><br>
+                电子邮件：<input type="email" class="editable" value="1942322962@qq.com">
+            </td>
+            <td class="icon-cell">📸</td>
+            <td rowspan="2" class="photo-cell">
+                <img src="图片1.jpg" alt="个人照片">
+            </td>
+        </tr>
+
+        <!-- 教育背景 -->
+        <tr>
+            <td class="icon-cell">🎓</td>
+            <td colspan="2">
+                <strong>教育背景</strong><br>
+                入学时间：<input type="date" class="editable" value="2024-09-01"><br>
+                毕业时间：<input type="date" class="editable" value="2028-06-30"><br>
+                学校：<input type="text" class="editable" value="鲁东大学"><br>
+                专业：<input type="text" class="editable" value="软件工程">
+            </td>
+        </tr>
+
+        <!-- 技能专长 -->
+        <tr class="merge-row">
+            <td class="icon-cell" colspan="2">💻</td>
+            <td colspan="3">
+                <strong>技能专长</strong><br>
+                <textarea class="editable" rows="4">• 略懂C语言编程
+• 熟悉AI工具的使用
+• 掌握部分编译原理
+• 英语通过3级考试（CET-3）
+• 精通ocg以及tcg环境</textarea>
+            </td>
+        </tr>
+
+        <!-- 项目经历 -->
+        <tr class="merge-row">
+            <td class="icon-cell" colspan="2">🔧</td>
+            <td colspan="3">
+                <strong>项目经历</strong><br>
+                <textarea class="editable" rows="4">• 完成C语言作业
+• 学会了C语言中部分基本语法
+• 完成linux的结课考试
+• 取得了鲁东大学ocg开学杯四强
+• 取得了鲁东大学杯ocg比赛的冠军</textarea>
+            </td>
+        </tr>
+
+        <!-- 自我评价 -->
+        <tr class="merge-row">
+            <td class="icon-cell" colspan="2">🌟</td>
+            <td colspan="3">
+                <strong>未来目标</strong><br>
+                <textarea class="editable" rows="4">我将努力学习编程语言与英语，提高个人素养，加强前端开发实训课程的学习，努力成为一名出色的软件工程专业的大学生，在未来成为一名优秀的程序员！</textarea>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        // 保存修改的功能（示例）
+        document.querySelectorAll('.editable').forEach(input => {
+            input.addEventListener('blur', function() {
+                const value = this.value;
+                const field = this.getAttribute('data-field') || this.tagName.toLowerCase();
+                console.log(`修改了${field}为：${value}`);
+                // 这里可以添加将数据发送到服务器的逻辑
+            });
+        });
+    </script>
+</body>
+</html>
